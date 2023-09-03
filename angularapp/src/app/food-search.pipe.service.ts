@@ -1,9 +1,21 @@
-import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({
+    name: 'foodSearch'
 })
-export class FoodSearchPipeService {
+export class FoodSearchPipe implements PipeTransform {
 
-  constructor() { }
+    transform(items: any[], field: string, value: string): any[] {
+        if (!items) {
+            return [];
+        }
+
+        if (!value) {
+            return items;
+        }
+
+        return items.filter(item => item[field].match(new RegExp(value, 'i')));
+    }
+
 }
