@@ -38,9 +38,9 @@
                 <small class="food-calories">{{ newFoodCalories }}</small>
             </h3>
         </li>
+    </ul>
 
-
-
+    <ul>
         <li class="single-food" *ngFor="let food of foods | foodSearch:'name':pattern;">
             <alt img [src]="food.image">
             <h3 class="food-name">
