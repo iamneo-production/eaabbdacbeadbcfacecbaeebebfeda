@@ -38,7 +38,7 @@
                 <small class="food-calories">{{ newFoodCalories }}</small>
             </h3>
         </li>
-
+    </ul>
 
 
         <li class="single-food" *ngFor="let food of foods | foodSearch:'name':pattern;">
@@ -50,7 +50,6 @@
             <input type="text" #quantity value="1">
             <button (click)="addToMyList(food, quantity)"> Add </button>
         </li>
-    </ul>
 
 </div>
 
