@@ -38,7 +38,7 @@
 
 
 
-        <li class="single-food" *ngFor="let food of foods | foodSearch:'name':pattern;">
+        <li class="single-food" *ngFor="let food of foods | food-search:'name':pattern;">
             <img [src]="food.image">
             <h3 class="food-name">
                 {{ food.name }}
