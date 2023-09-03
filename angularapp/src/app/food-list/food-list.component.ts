@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import foods from '../food';
+//import foods from '../food';
 
 @Component({
   selector: 'app-food-list',
